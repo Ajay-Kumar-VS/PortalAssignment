@@ -1,27 +1,33 @@
-
 import "./App.css";
-// import { createPortal } from 'react-dom';
-import Portal from "./Portal";
-import { useEffect, useState } from "react";
 
+import Portal from "./Portal";
+import { useState } from "react";
 
 function App() {
-  const [a,setA]=useState(false)
-  // const [ref,setref]=useState(null)
-  function openPortal(){
-    setA(true)
-    console.log(a)
-  }
+  // state to monitor and set portal is visible or not
+  const [isPortalVisible, setPortalVisible] = useState(false);
   
-  // console.log(ref)
- 
+  //function to open /make portal visible by setting its state  true
+  function openPortal() {
+    setPortalVisible(true);
+  }
+
+  //function to close/make portal not visible by setting its state  false
+
+  function closePortal() {
+    setPortalVisible(false);
+  }
+
   return (
     <>
-      <div>
-        <button onClick={openPortal}>OpenPortal</button>
-        {a&&<Portal onClose={() => setA(false)} />}
+      <div className="App-container">
+        <button id="button-openPortal" onClick={openPortal}>
+          OpenPortal
+        </button>
+
+        {/* if isPortalVisible is true only then rendering this portal*/}
+        {isPortalVisible && <Portal closePortal={closePortal} />}
       </div>
-      
     </>
   );
 }

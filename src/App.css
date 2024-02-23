@@ -1,0 +1,16 @@
+.App-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:#B0E0E6 ;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+#button-openPortal{
+  position: fixed;
+  top:100px;
+  height: 40px;
+  width: 150px;
+  border-radius: 5px;
+}

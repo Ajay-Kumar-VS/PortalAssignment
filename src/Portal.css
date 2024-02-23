@@ -1,20 +1,39 @@
-.portal{
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
-    background-color: aqua;
-    position: absolute;
-    margin-left: 500px;
-    z-index: 2;
-  
-}
-.portal-container{
-    width: 100vw;
-    height: 100vh;
-    background-color:rgba(0, 0, 0,.5);
-    z-index: 1;
-    position: fixed;
-    top: 0;
-    left: 0;
+.portal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: aqua;
+  position: fixed;
+  top: 200px;
 
+  width: 300px;
+  height: 200px;
+
+  border-color: #ffe4c4;
+  box-shadow: 2px 2px #87ceeb;
+  border-radius: 5px;
+  background: #87cefa;
+}
+.portal-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(241, 237, 237, 0.676);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+#button-exit{
+   margin: 20px;
+    height: 40px;
+    width: 150px;
+    border-radius: 5px;
+}
+p{
+    font-size: larger;
+    font-weight: 400;
 }
